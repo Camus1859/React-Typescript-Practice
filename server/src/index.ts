@@ -1,5 +1,5 @@
 import express, { Request, Response, NextFunction } from "express";
-import cors from "cors"
+import cors from "cors";
 
 const app = express();
 
@@ -92,7 +92,7 @@ app.put("/api/users/:id", async (req, res, next) => {
   }
 });
 
-app.delete("/api/users/:id", async(req, res, next) => {
+app.delete("/api/users/:id", async (req, res, next) => {
   try {
     const id = req.params.id;
     const hasUser = users.find((u) => u.id === id);
@@ -105,7 +105,18 @@ app.delete("/api/users/:id", async(req, res, next) => {
   }
 });
 
-const getPlaceHolderData = 
+app.get("/api/posts", async (req, res, next) => {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    if (!response.ok) throw new Error("Unable to fetch data");
+
+    const data = await response.json();
+
+    return res.status(200).json(data.slice(0, 10));
+  } catch (e) {
+    next(e)
+  }
+});
 
 app.use(myErrorCatcher);
 
