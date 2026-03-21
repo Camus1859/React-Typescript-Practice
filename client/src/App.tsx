@@ -1,7 +1,7 @@
-import UserReducer from "./exercises/UserReducer";
+import PaginatedUsers from "./exercises/interview-redo/PaginatedUsers";
 
 function App() {
-  return <UserReducer />;
+  return <PaginatedUsers />;
 }
 
 export default App;
