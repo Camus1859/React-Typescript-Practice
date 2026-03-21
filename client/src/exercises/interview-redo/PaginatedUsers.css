@@ -1,0 +1,30 @@
+table,
+th,
+td {
+  border: 1px solid;
+}
+
+.gray {
+  background-color: gray;
+}
+
+.white {
+  background-color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  width: 450px;
+  margin: auto
+}
+
+.userInfoContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  cursor: pointer;
+}
