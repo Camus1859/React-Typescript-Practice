@@ -1,7 +1,7 @@
-import PaginatedUsers from "./exercises/interview-redo/PaginatedUsers";
+import FormValidation from "./exercises/form-validation/FormValidation";
 
 function App() {
-  return <PaginatedUsers />;
+  return <FormValidation />;
 }
 
 export default App;
