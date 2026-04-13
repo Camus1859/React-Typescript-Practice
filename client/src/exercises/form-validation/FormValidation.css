@@ -1,1 +1,13 @@
 /* Style it */
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 400px;
+}
